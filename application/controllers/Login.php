@@ -19,9 +19,12 @@ class Login extends CI_controller {
 			if($cek==TRUE) {
 			$data=array('username'=>$username,'logged_in'=>TRUE );
 			$this->session->set_userdata($data);
+			// var_dump($this->session->userdata());
 			redirect('admin/barang');
+				// echo "bisa";
 			} else {			
 			redirect('login','refresh');	
+				// echo "tidak";
 			}	
 		
 	}
@@ -29,6 +32,7 @@ class Login extends CI_controller {
 	public function logout() {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('logged_in');
+		$this->session->sess_destroy();
 		redirect('login','refresh');
 	}
 }

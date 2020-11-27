@@ -63,7 +63,7 @@
           	<tbody>
 <?php
 //jika cart sudah diisi
-if(!empty($this->cart->contents())) {
+// if(!empty($this->cart->contents())) {
 	//menampilkan data dalam cart
 	foreach ($this->cart->contents() as $items) {
 ?>
@@ -79,7 +79,7 @@ if(!empty($this->cart->contents())) {
           		</tr>
 <?php 
 	} 
-} 
+// } 
 ?>
           	</tbody>
           </table>
@@ -120,7 +120,7 @@ function tambah_transaksi() {
 		success: function(data) {
 			console.log(data);
 			//untuk meload ulang halaman transaksi
-			document.location.href="<?php echo site_url('transaksi'); ?>";
+			// document.location.href="<?php echo site_url('transaksi'); ?>";
 		}
 	});
 }

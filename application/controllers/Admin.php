@@ -5,6 +5,7 @@ class Admin extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		if(!$this->session->userdata('logged_in')) {redirect('login','refresh');}//user harus login
+		// var_dump($this->session->userdata());
 	}
 
 	public function _crud_output($output = null)

@@ -51,7 +51,8 @@ class Transaksi extends CI_Controller {
 		);
 		$tambah=$this->cart->insert($data);
 
-		echo "berhasil";
+		// echo "berhasil";
+		var_dump($this->cart->contents());
 	}
 
 	//untuk hapus barang di cart
