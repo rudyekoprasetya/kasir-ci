@@ -30,6 +30,6 @@ class Login extends CI_controller {
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('logged_in');
 		redirect('login','refresh');
-		}
+	}
 }
 ?>
